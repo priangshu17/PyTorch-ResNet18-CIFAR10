@@ -18,8 +18,30 @@ After training for 10 epochs, the model achieves the following performance on th
 
 * **Final Test Accuracy**: **79.47%**
 
-### Training History
-The following plots show the model's loss and accuracy on the training, validation, and test sets over 10 epochs.
+🏗️ Code Structure
+The Jupyter Notebook py_resnet.ipynb is organized as follows:
+
+Imports: All necessary libraries are imported.
+
+Data Loading & Preprocessing: The CIFAR-10 dataset is loaded, transformed, and split into training, validation, and test sets. DataLoader is used to create data batches.
+
+Model Definition:
+
+BasicBlock: Defines a single residual block with two convolutional layers and a shortcut connection.
+
+ResNet18: Constructs the full ResNet-18 model using BasicBlock modules.
+
+Training:
+
+The model, loss function (CrossEntropyLoss), and optimizer (Adam) are defined.
+
+A training_loop function handles the training and evaluation for each epoch.
+
+Evaluation & Visualization:
+
+A plot_metrics function visualizes the loss and accuracy curves.
+
+The final model is evaluated on the test set to determine its accuracy.
 
 ![Training and Validation Metrics](py_resnet.ipynb#cell-432316b1)
 
